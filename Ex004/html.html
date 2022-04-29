@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somando números</h1>
+    <input type="number" name="primeiro" id="primeiro"> +
+    <input type="number" name="segundo" id="segundo">
+    <input type="button" value="Somar" id="botao">
+    <div id="resultado">O resultado deu</div>
+    <script>
+        var primeiro = window.document.getElementById('primeiro')
+        var segundo = window.document.getElementById('segundo')
+        var botao = window.document.getElementById('botao')
+        var resultado = window.document.getElementById('resultado')
+        var p = Number(primeiro.value)
+        var s = Number(segundo.value)
+        var resull = p + s
+        botao.addEventListener('click', clicar)
+
+        function clicar(){
+        
+        resultado.innerText = `O resultado de ${p} + ${s} deu um total de ${resull}`
+        }
+    </script>
+
+
+
+
+</body>
+</html>
