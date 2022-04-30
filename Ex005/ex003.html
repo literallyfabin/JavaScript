@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        input#vel{
+            width: 70px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite abaixo sua velocidade e saiba se é multado ou não.</h1>
+        <input type="number" name="vel" id="vel"> KM/h
+        <input type="button" value="Aperte aqui" id="botao">
+        <div id="res">a</div>
+        <script>
+            
+            var botao = document.getElementById('botao')
+            botao.addEventListener('click' , clicar)
+            function clicar() {
+                var vel = document.getElementById('vel')
+                var resultadoo = Number(vel.value)
+                var div = document.getElementById('res')
+
+                if (resultadoo > 60) {
+                    div.innerHTML += `<p>Você ultrapassou a velocidade de ${resultadoo}. MULTADO!</p>`
+
+                }   else{
+                    div.innerHTML = `<p> Você está dentro da lei de velocidade. Parabens !</p>`}
+
+            }
+         
+        </script>
+</body>
+</html>

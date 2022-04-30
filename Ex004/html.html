@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input#primeiro{
+            width: 100px;
+            height: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        input#segundo{
+            width: 100px;
+            height: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        input#botao{
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Somando números</h1>
@@ -12,19 +32,25 @@
     <input type="number" name="segundo" id="segundo">
     <input type="button" value="Somar" id="botao">
     <div id="resultado">O resultado deu</div>
+    <link rel="stylesheet" href="style.css">
     <script>
-        var primeiro = window.document.getElementById('primeiro')
-        var segundo = window.document.getElementById('segundo')
         var botao = window.document.getElementById('botao')
-        var resultado = window.document.getElementById('resultado')
-        var p = Number(primeiro.value)
-        var s = Number(segundo.value)
-        var resull = p + s
         botao.addEventListener('click', clicar)
 
         function clicar(){
+
         
-        resultado.innerText = `O resultado de ${p} + ${s} deu um total de ${resull}`
+        console.log(p)
+        console.log(s)
+        var primeiro = window.document.getElementById('primeiro')
+        var segundo = window.document.getElementById('segundo')
+        var resultado = window.document.getElementById('resultado')
+        
+        var p = Number(primeiro.value)
+        var s = Number(segundo.value)
+
+        var resull = p + s
+        resultado.innerText = `O resultado de ${p} + ${s} deu um total de ${resull}` 
         }
     </script>
 
