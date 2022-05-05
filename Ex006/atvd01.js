@@ -1,4 +1,4 @@
-var idade = '30'
+var idade = '25'
 if (idade >= 18 && idade <=29){   
     console.log('Você é Maior de idade !')
 
